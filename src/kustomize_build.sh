@@ -6,7 +6,7 @@ function kustomize_build {
     
     $(kustomize create  --autodetect --recursive)
 
-    echo 'ls -al'
+    echo $(ls -al)
 
     build_output=$(kustomize build ${enable_alpha_plugins} ${kustomize_build_options} ${kustomize_build_dir} 2>&1)
 
