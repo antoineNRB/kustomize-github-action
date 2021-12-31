@@ -10,7 +10,7 @@ function kustomize_build {
     echo $(ls ${kustomize_build_dir})
     echo $(pwd)
 
-    build_output=$(kustomize build ${enable_alpha_plugins} ${kustomize_build_options} ${kustomize_build_dir} 2>&1)
+    build_output=$(kustomize build ${kustomize_build_options} ${kustomize_build_dir} 2>&1)
 
     build_exit_code=${?}
 
