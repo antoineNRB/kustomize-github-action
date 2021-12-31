@@ -6,7 +6,7 @@ function kustomize_build {
     
     $(kustomize create  --autodetect --recursive)
 
-    echo $(cat kustomization.yaml)
+    echo $(kustomization.yaml)
     echo $(ls ${kustomize_build_dir})
     echo $(pwd)
 
