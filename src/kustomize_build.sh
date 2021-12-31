@@ -3,6 +3,8 @@
 function kustomize_build {
     # gather output
     echo "build: info: kustomize build in directory ${kustomize_build_dir}."
+    
+    $(kustomize create  --autodetect --recursive)
 
     build_output=$(kustomize build ${enable_alpha_plugins} ${kustomize_build_options} ${kustomize_build_dir} 2>&1)
 
